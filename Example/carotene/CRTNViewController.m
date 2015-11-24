@@ -28,20 +28,6 @@
     [self.tableView reloadData];
 }
 
-//- (void)_reconnect;
-//{
-//    _webSocket.delegate = nil;
-//    [_webSocket close];
-//    
-//    _webSocket = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://localhost:8081/stream"]]];
-//    _webSocket.delegate = self;
-//    
-//    
-//    self.title = @"Opening Connection...";
-//    [_webSocket open];
-//    
-//}
-
 - (void)viewDidAppear:(BOOL)animated;
 {
     [super viewDidAppear:animated];
@@ -54,8 +40,33 @@
     [super viewWillAppear:animated];
     carotene = [[CRTNCarotene alloc] init:[NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://localhost:8081/stream"]]];
     [carotene subscribe:@"chat" handleWithBlock:^(NSString *msg){
-        NSLog(@"hola %@", msg);
+        [self display:msg];
     }];
+
+}
+
+- (void) display:(NSString *)messageRaw
+{
+    NSDictionary *messageJson;
+    NSError *jsonError;
+    messageJson = [NSJSONSerialization JSONObjectWithData:[messageRaw dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&jsonError];
+    NSLog(@"messageJson \"%@\"", messageJson);
+    [_messages addObject:[messageJson objectForKey:@"msg"]];
+    NSLog(@"messageJson \"%@\"", messageJson);
+    
+    NSLog(@"Messages available after update %lu", _messages.count);
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+    
+    NSLog(@"Dimensions %f", self.tableView.tableFooterView.frame.size.height);
+    
+    UIEdgeInsets tableInsets = self.tableView.contentInset;
+    CGFloat tableHeight = self.tableView.frame.size.height - tableInsets.bottom - tableInsets.top;
+    CGFloat bottom = CGRectGetMaxY(self.tableView.tableFooterView.frame);
+    CGFloat offset = bottom - tableHeight;
+    if(offset > 0.f) {
+        [self.tableView setContentOffset:CGPointMake(0,  offset) animated:YES];
+    }
+
 
 }
 
@@ -70,62 +81,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)payload;
-//{
-//    NSLog(@"Received \"%@\"", payload);
-//    
-//    NSError *jsonError;
-//    //NSDictionary *jsonObject = [[NSArray alloc]init];
-//    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:[payload dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&jsonError];
-//    
-//    NSLog(@"jsonDataArray: %@",jsonObject);
-//    
-//    NSString *messageRaw;
-//    NSDictionary *messageJson;
-//    
-//    if (jsonObject != nil) {
-//        NSString *typeStr = [jsonObject objectForKey:@"type"];
-//        NSArray *types = @[@"message", @"presence", @"info"];
-//        int type = (int)[types indexOfObject:typeStr];
-//        switch (type) {
-//            case 0:
-//                // message
-//                messageRaw = [jsonObject objectForKey:@"message"];
-//                NSLog(@"messageRaw \"%@\"", messageRaw);
-//
-//                messageJson = [NSJSONSerialization JSONObjectWithData:[messageRaw dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&jsonError];
-//                NSLog(@"messageJson \"%@\"", messageJson);
-//                [_messages addObject:[messageJson objectForKey:@"msg"]];
-//                NSLog(@"messageJson \"%@\"", messageJson);
-//
-//                NSLog(@"Messages available after update %lu", _messages.count);
-//                [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-//                
-//                NSLog(@"Dimensions %f", self.tableView.tableFooterView.frame.size.height);
-//                
-//                UIEdgeInsets tableInsets = self.tableView.contentInset;
-//                CGFloat tableHeight = self.tableView.frame.size.height - tableInsets.bottom - tableInsets.top;
-//                CGFloat bottom = CGRectGetMaxY(self.tableView.tableFooterView.frame);
-//                CGFloat offset = bottom - tableHeight;
-//                if(offset > 0.f) {
-//                    [self.tableView setContentOffset:CGPointMake(0,  offset) animated:YES];
-//                }
-//
-//                break;
-//            case 1:
-//                // Item 2
-//                break;
-//            case 2:
-//                // Item 3
-//                break;
-//            default:
-//                break;
-//        }
-//
-//    }
-//
-//
-//}
 
 
 #pragma mark - UITableViewController
@@ -157,9 +112,7 @@
     
     cell.textLabel.text = [_messages objectAtIndex:indexPath.row];
     return cell;
-//    NSString *message = [_messages objectAtIndex:indexPath.row];
-//    
-//    return [self.tableView dequeueReusableCellWithIdentifier:message.fromMe ? @"SentCell" : @"ReceivedCell"];
+
 }
 
 

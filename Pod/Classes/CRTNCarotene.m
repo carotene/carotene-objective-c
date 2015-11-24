@@ -73,18 +73,8 @@
 - (void)subscribe:(NSString *)channelName handleWithBlock:(void (^)(NSString *))block
 {
 
-    NSLog(@"Subcriptor for %@ ", channelName);
-    
-    NSError  *error;
-    NSDictionary *dictionary = @{
-                                 @"subscribe" : channelName
-                                 };
-    
-    NSData       *jsonData  = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:&error];
-    NSString *msg = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    [socket send:msg];
+
     [subscriptions setObject:block forKey:channelName];
-    
 }
 
 - (void)dealloc
@@ -97,17 +87,33 @@
     [socket close];
 }
 
+- (void) doSubscribe:(NSString *)channelName
+{
+    NSLog(@"Subcriptor for %@ ", channelName);
+    
+    NSError *error;
+    NSDictionary *dictionary = @{
+                                 @"subscribe" : channelName
+                                 };
+    
+    NSData  *jsonData  = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:&error];
+    NSString *msg = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    [socket send:msg];
+}
+
 - (void)dispatchToSubscribers:(NSString *)messageJson channelName:(NSString *)channel
 {
     NSLog(@"Channel is %@ ", channel);
 
-    dispatch_block_t block = [subscriptions objectForKey:channel];
+    void (^block)(NSString * ch) = [subscriptions objectForKey:channel];
     NSLog(@"Got a block ");
 
     assert(_delegateDispatchQueue);
     NSLog(@"Got a queue ");
 
-    dispatch_async(_delegateDispatchQueue, block);
+    dispatch_async(_delegateDispatchQueue, ^{
+        block(messageJson);
+    });
     
 }
 
@@ -117,6 +123,9 @@
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket;
 {
     NSLog(@"Websocket Connected");
+    for (NSString* channelName in subscriptions) {
+        [self doSubscribe:channelName];
+    }
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
@@ -136,8 +145,6 @@
     
     NSLog(@"jsonDataArray: %@",jsonObject);
     
-    NSString *messageRaw;
-    
     if (jsonObject != nil) {
         NSString *typeStr = [jsonObject objectForKey:@"type"];
         NSArray *types = @[@"message", @"presence", @"info"];
@@ -145,15 +152,13 @@
         switch (type) {
             case 0:
                 // message
-                NSLog(@"Got a message ");
-                messageRaw = [jsonObject objectForKey:@"message"];
-                [self dispatchToSubscribers:messageRaw channelName:@"chat"];
+                [self processMessage:jsonObject];
                 break;
             case 1:
-                // Item 2
+                // presence
                 break;
             case 2:
-                // Item 3
+                // info
                 break;
             default:
                 break;
@@ -162,6 +167,15 @@
     }
     
     
+}
+
+-(void)processMessage:(NSDictionary *)jsonMessage
+{
+    NSString *messageRaw;
+    NSLog(@"Got a message ");
+    messageRaw = [jsonMessage objectForKey:@"message"];
+    NSString *channelStr = [jsonMessage objectForKey:@"channel"];
+    [self dispatchToSubscribers:messageRaw channelName:channelStr];
 }
 
 
