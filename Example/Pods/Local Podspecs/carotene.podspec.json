@@ -1,7 +1,7 @@
 {
   "name": "carotene",
   "version": "0.1.0",
-  "summary": "A short description of carotene.",
+  "summary": "Real time PubSub server.",
   "description": "",
   "homepage": "https://github.com/<GITHUB_USERNAME>/carotene",
   "license": "MIT",
@@ -20,6 +20,11 @@
   "resource_bundles": {
     "carotene": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "SocketRocket": [
+      "~> 0.4.1"
     ]
   }
 }

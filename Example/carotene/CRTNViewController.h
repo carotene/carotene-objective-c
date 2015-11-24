@@ -8,6 +8,9 @@
 
 @import UIKit;
 
-@interface CRTNViewController : UIViewController
+@interface CRTNViewController : UITableViewController
+
+@property (weak, nonatomic) IBOutlet UITextView *textInput;
+
 
 @end
