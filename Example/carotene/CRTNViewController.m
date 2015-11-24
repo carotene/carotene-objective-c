@@ -153,7 +153,15 @@
                 [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
                 
                 NSLog(@"Dimensions %f", self.tableView.tableFooterView.frame.size.height);
-                [self.tableView scrollRectToVisible:self.tableView.tableFooterView.frame animated:YES];
+                
+                UIEdgeInsets tableInsets = self.tableView.contentInset;
+                CGFloat tableHeight = self.tableView.frame.size.height - tableInsets.bottom - tableInsets.top;
+                CGFloat bottom = CGRectGetMaxY(self.tableView.tableFooterView.frame);
+                CGFloat offset = bottom - tableHeight;
+                if(offset > 0.f) {
+                    [self.tableView setContentOffset:CGPointMake(0,  offset) animated:YES];
+                }
+
                 break;
             case 1:
                 // Item 2
@@ -166,18 +174,7 @@
         }
 
     }
-    
-//    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&jsonError];
-//    if(jsonObject !=nil){
-//        NSMutableArray *array=[jsonObject objectForKey:@"#type"];
-//    }
-//
-//    _textInput.text = @"";
-//    [_messages addObject:message];
-//    NSLog(@"Messages available after update %lu", _messages.count);
-//    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-//
-//    [self.tableView scrollRectToVisible:self.tableView.tableFooterView.frame animated:YES];
+
 
 }
 

@@ -68,6 +68,7 @@
 		65BC31095CCDFC80CBF6BBA843751F23 /* EXPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2ECE30B512C988766DADF4584F1563 /* EXPMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		664D8A8536A7E269609A23F8FADD4EFD /* carotene-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73EC774B00450499247D4B6A016ADD5F /* carotene-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		666D1A4238C9B5511361916F52BC1145 /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = F5280A07676ADB64AAFC5F3ADBBEFCF5 /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		669ACB791C04D5D800394F8B /* CRTNCarotene.m in Sources */ = {isa = PBXBuildFile; fileRef = 669ACB781C04D5D800394F8B /* CRTNCarotene.m */; };
 		66A27898E989A3FA5C15AA671C4536F0 /* EXPMatchers+beIdenticalTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABF61EFDBA2194D57080E67BCCD17 /* EXPMatchers+beIdenticalTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		671AA9503523C7A2F6DCF02AE77BC839 /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C50A74C3DC957F589C3E9CE3A1F0CA /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		67459AD239EF669A365519E06B45DCFE /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A7F135A66BC4FA5C3BD519DB730739 /* EXPExpect.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -331,6 +332,8 @@
 		619777C6C4E98F5E7991FD7A8C16BAA4 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		61F66E3EC7341DAE9613318D3DEBDA26 /* SPTExampleGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExampleGroup.m; path = Specta/Specta/SPTExampleGroup.m; sourceTree = "<group>"; };
 		66857F755C3CF0B3A0DFAE7A66F3F84B /* EXPMatchers+beInTheRangeOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInTheRangeOf.m"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.m"; sourceTree = "<group>"; };
+		669ACB781C04D5D800394F8B /* CRTNCarotene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTNCarotene.m; sourceTree = "<group>"; };
+		669ACB7A1C04D5F200394F8B /* CRTNCarotene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTNCarotene.h; sourceTree = "<group>"; };
 		671827CB75E9F511422B45536BE5417B /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F0050547D803673C3B154A075BFE92 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SocketRocket.modulemap; sourceTree = "<group>"; };
 		6A6D33A1AABDAEC3A20A8E7188F92872 /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "Expecta/Matchers/EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
@@ -557,6 +560,8 @@
 			isa = PBXGroup;
 			children = (
 				462BE603D49F1FEA848B782AEE4511BC /* ReplaceMe.m */,
+				669ACB781C04D5D800394F8B /* CRTNCarotene.m */,
+				669ACB7A1C04D5F200394F8B /* CRTNCarotene.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1311,6 +1316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1986C9E87413AADFA6A23D7D2B9417E /* carotene-dummy.m in Sources */,
+				669ACB791C04D5D800394F8B /* CRTNCarotene.m in Sources */,
 				A19794FD14C6DCAFD56F0E8671A8B2FE /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
