@@ -1,0 +1,6 @@
+framework module Pods_carotene_Example {
+  umbrella header "Pods-carotene_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

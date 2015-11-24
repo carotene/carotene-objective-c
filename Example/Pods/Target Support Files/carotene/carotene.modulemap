@@ -1,0 +1,6 @@
+framework module carotene {
+  umbrella header "carotene-umbrella.h"
+
+  export *
+  module * { export * }
+}
