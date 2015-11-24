@@ -2,7 +2,7 @@
 
 [WIP] Objective-C client library for Carotene http://carotene-project.com
 
-The library is work in progress.
+This library is a work in progress.
 Currently you can find a working example of communication with a Carotene server in (a simple chat) the Example directory.
 Publish and subscribe to channels is implemented.
 
