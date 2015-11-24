@@ -19,6 +19,8 @@
 
 - (void)publish:(NSObject *)data channel:(NSString *)channelName;
 
+- (void)subscribe:(NSString *)channelName handleWithBlock:(void (^)(NSString *))block;
+
 @end
 
 #endif
