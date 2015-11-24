@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '73255E1247B43E6953418C61'
+               BlueprintIdentifier = '419CA4EA3751C89891C8762D'
                BlueprintName = 'carotene'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'carotene.framework'>

@@ -14,6 +14,7 @@
 		0C5FDDFAA8EF749AEB78EE3213E49633 /* ExpectaObject+FBSnapshotTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D7D76D48B4920DF794375E1450D558B /* ExpectaObject+FBSnapshotTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C6FF91EB1F0391ED75DC72D31D159EF /* EXPMatchers+beTruthy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4556B715451469DF4A87331BFE432DB4 /* EXPMatchers+beTruthy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0D16B556212D317A0D4FEB71E102E207 /* EXPMatchers+beLessThan.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438BA00328526CD5525671F542DB6B4 /* EXPMatchers+beLessThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DE37EA21D6D74C8C553756C0D84CE46 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFF2DE3C87DE311D6598304E6AF3078 /* CFNetwork.framework */; };
 		0EBFA5FBE4953A83B677CE2A75746761 /* EXPMatchers+beLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = 803694B2A77A9F77F85E9FBC841580D4 /* EXPMatchers+beLessThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0F94F5B0ABB3252B9275B7C129EC7A26 /* EXPMatchers+equal.h in Headers */ = {isa = PBXBuildFile; fileRef = F23F8F00EEBFADD7D50CA87D1E8DD395 /* EXPMatchers+equal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11C1AEB289C1EB80089349B71F09D04B /* EXPMatchers+raiseWithReason.h in Headers */ = {isa = PBXBuildFile; fileRef = EC39521409505B2974D23337FFC3102A /* EXPMatchers+raiseWithReason.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,75 +54,70 @@
 		46137F5CC368BF38BAF0D0AF81DD8FFE /* EXPMatchers+raise.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DBB7001D49113A377E00671C59A56 /* EXPMatchers+raise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4686AC52E9875113D663BE60D2296BB3 /* EXPMatchers+FBSnapshotTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B00970D871360330338C92ADB2E68EF /* EXPMatchers+FBSnapshotTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		471FD4F68E27AB26FA2AEBB8B245CEE4 /* NSValue+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E16E359AA5F1B14232DD738742CC77 /* NSValue+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A0D59ED45D8A8F5ADF7D87899162483 /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2331B55A7F5F5DBA882BDC1FF17E3141 /* SocketRocket-dummy.m */; };
 		4BBCBB9D8EF0B241A4A4FE4982985481 /* ExpectaSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE00DAD94C7CBF47B7DF67BD598359 /* ExpectaSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4E8C62EF3056E2C28422011DD43A8616 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA044C97C69660A9A43EF76B153EB6 /* Security.framework */; };
 		51DDDB0FB4899757CF6A826B531B940D /* EXPUnsupportedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F33EFD6B6B08D039045F6E69543060DD /* EXPUnsupportedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55A055CA3CE8BCE0B515E8E66796FD17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1599B3D2B5C8C72B475C8EBF3F1E5D /* Foundation.framework */; };
 		58CBFFD2E2917324A9C792EC38B52C28 /* Specta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B6C6E54EC3B1F3CC93A2CC430291D7 /* Specta-dummy.m */; };
 		595A04BC68811583B92D4E64236C0928 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6089389FD0EEABD96AD095B2771A99 /* QuartzCore.framework */; };
 		5A3DED2AC8EC782575EBFF45ED0E3901 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F55A957D6D76928929E89ED9F805E0 /* UIKit.framework */; };
 		5AC451E654F25FABA9A8C714D9AD480E /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6E5DB58ECB276FA1586B5D2C1C05E /* SPTCallSite.m */; };
 		5B2D4A621D3DA971A474776AF36BB073 /* EXPBlockDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C1B7A700E5B7C2E81341D988132C7 /* EXPBlockDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5C3EDEBD584F61669BCDE53D890FE355 /* SPTExcludeGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E338239C25D19D0E0E1EBEF6DC89ADA /* SPTExcludeGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C9BD8DC8BC892199064BA2FB784AF00 /* carotene-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749E449AD905D5D50134048D09F3F2D /* carotene-dummy.m */; };
 		5EA7043FE10E75D02F3C3052AF8B8318 /* EXPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DA731D9C41C71872DF87E4DEC28215 /* EXPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EB6ABE2A4B235DFE36EDED853FB9543 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C881D4E07C300AE15FF8C4C2723D7339 /* SRWebSocket.m */; };
 		61DC7B8FDAC76B1EAB04E576ECCED032 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED8758A95CD07534E6A1BCA5F8E1F5 /* FBSnapshotTestController.m */; };
 		65BC31095CCDFC80CBF6BBA843751F23 /* EXPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2ECE30B512C988766DADF4584F1563 /* EXPMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		664D8A8536A7E269609A23F8FADD4EFD /* carotene-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73EC774B00450499247D4B6A016ADD5F /* carotene-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		666D1A4238C9B5511361916F52BC1145 /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = F5280A07676ADB64AAFC5F3ADBBEFCF5 /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		669ACB791C04D5D800394F8B /* CRTNCarotene.m in Sources */ = {isa = PBXBuildFile; fileRef = 669ACB781C04D5D800394F8B /* CRTNCarotene.m */; };
 		66A27898E989A3FA5C15AA671C4536F0 /* EXPMatchers+beIdenticalTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDABF61EFDBA2194D57080E67BCCD17 /* EXPMatchers+beIdenticalTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		671AA9503523C7A2F6DCF02AE77BC839 /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C50A74C3DC957F589C3E9CE3A1F0CA /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		67459AD239EF669A365519E06B45DCFE /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A7F135A66BC4FA5C3BD519DB730739 /* EXPExpect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		679C42D155FC2672999AF5E9E6580E57 /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2331B55A7F5F5DBA882BDC1FF17E3141 /* SocketRocket-dummy.m */; };
 		69CBFF5B7699798C1340A06FBA5988D5 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 1375FE471868AA050692AAB611CD4CFE /* FBSnapshotTestCasePlatform.m */; };
 		6A1E5BBE21DE65EE41DEA7F8E0922C8A /* SPTExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5974CFEB4F1796AC6CD7A7F125865C /* SPTExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B90AA39BBA705B06D06A9B608CDD0E0 /* SPTCompiledExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C23578148EFE24EA5D4FCFDC729112 /* SPTCompiledExample.m */; };
 		6CB34F63785634359EAB185430976CAF /* Pods-carotene_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CED15A5BC01F1FEAF09AECB3207BF66 /* Pods-carotene_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E1D978790705E137FDE439AA68DD3AA /* EXPFloatTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = D7CE9EB531BE65FA1CBA24C83A7141AB /* EXPFloatTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E46CB00E7B42583FE8F024CB1C1CC22 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB602B03B12FA0582E12F974955B08A /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E57A6B462AB7DCF3C77143280E6F165 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7399ADD85969BBE1C4E3A54CD66239EC /* SocketRocket.framework */; };
 		6EFC63A5CED45BB39FC79D87F2C47D6B /* EXPMatchers+beGreaterThan.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4EA27ED633BB3959B4256BB340B657 /* EXPMatchers+beGreaterThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F278423C8AE1DA47F35E374BB5B91EC /* EXPMatchers+beSupersetOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B7DD812BF2099774E2BD0931DB7B6B /* EXPMatchers+beSupersetOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7098123EA9C7537EC0D6C8959F3C262C /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E03BD36572D2D483EAF9FFD703B65B96 /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70FAD80858402EC6F404234AC85C492E /* CRTNCarotene.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CC0BF36192E28C0DB08F1180E97474 /* CRTNCarotene.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75F421DD76E56F558BD2B447383C620D /* SpectaTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A05C79540688967A2B3BF65A89C13E /* SpectaTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76CCABE79C04444450153424D7CE1DC1 /* EXPMatchers+beSupersetOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E476FF53FEC7B01EF64DEB940023891 /* EXPMatchers+beSupersetOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76D337327C10A7555447B69AA1562647 /* EXPMatchers+beInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA25992A2A4C7F007F2D3D8D104265 /* EXPMatchers+beInstanceOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		79558B1F97ABE4AB8942DC18BEBD4B82 /* EXPMatchers+beKindOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 422E17F31F19986CB83614AFE7CA1687 /* EXPMatchers+beKindOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A211860F672261C1522DCDF1FFC9ED0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58CAA385657E2AED8B53A4733D4D3A /* XCTest.framework */; };
 		7B223B4E6EF14BA12DA113F7EE10B96C /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = F10D1267DC723D54BFABFFA9B95DE276 /* NSObject+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F64869DDE8748CD028EB46A83FFCE2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1599B3D2B5C8C72B475C8EBF3F1E5D /* Foundation.framework */; };
 		805E425BBEF7A6133E32E1D30A073010 /* EXPExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD0A9ABBDA11D9907C315B04F9B870B /* EXPExpect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		80F7A60BC2814175154CF43CE4D822DD /* Expecta+Snapshots-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58165372B18F0853A1A584EC1AF8104F /* Expecta+Snapshots-dummy.m */; };
 		837B593D7C1D01B4EA400247309D6AB0 /* Expecta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F047DDF5F3639726CCA7684E500234C2 /* Expecta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85E31076D5530AEEB45ACF16B2B8A983 /* EXPMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 545A3551E6E54091761D9CC6EAA9B118 /* EXPMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85EB2F216487CB2E8F3FCCFBC4D69912 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6D33A1AABDAEC3A20A8E7188F92872 /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87FD5F0F682CDEB6A348CA448889E3EA /* EXPMatchers+beKindOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1068FFEE5FB48FB4CF560B5A3AE58F /* EXPMatchers+beKindOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8C26793DE8390E2AF3BD28705A26AA8A /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7399ADD85969BBE1C4E3A54CD66239EC /* SocketRocket.framework */; };
 		8C8C1B0D83FE6A4352F15154DB16372C /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D2CD43225C6E9795F775BCA7E448B66 /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8ED1A518FC49611097CF07B3D1E0A290 /* SPTTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E534DD1FA7F30C0CAE33818FC35676 /* SPTTestSuite.m */; };
 		8F5FCD4AB6C8870E8FEB23AFEA404A98 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16930BC64F83ED15BC7F150388624DA /* SwiftSupport.swift */; };
 		918E06480F28F27361B19D19432F8538 /* EXPMatchers+endWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 260B0265E79AAB5B8294AF01904959A9 /* EXPMatchers+endWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		931D410B9F8ACB935883DF8C59F9C93E /* EXPMatchers+postNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0FDBE0B04C0E349B6D3CBBA9E4E13 /* EXPMatchers+postNotification.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		94C47C87E397972CE98F75929F3B706C /* ExpectaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7377FE27C65B384FFFE2CE71B7B3876 /* ExpectaObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9573687F12EF5D4AED2BAFC0620F871F /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E03BD36572D2D483EAF9FFD703B65B96 /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9957AEB6EF57ADAEA8A4F15AE22233E4 /* XCTestCase+Specta.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7449099668B0459DDFABD89C32E06F /* XCTestCase+Specta.m */; };
 		9B2E761A064459F77EA9870BEF03ACC3 /* EXPMatchers+postNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = E98C542BDEA0B904375EA1D2556FF483 /* EXPMatchers+postNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BB9159FBA757600D3D4C0FF645F3911 /* EXPMatchers+beInTheRangeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 66857F755C3CF0B3A0DFAE7A66F3F84B /* EXPMatchers+beInTheRangeOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A090E1335802D26E75D008CC54E3EBE7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58CAA385657E2AED8B53A4733D4D3A /* XCTest.framework */; };
-		A19794FD14C6DCAFD56F0E8671A8B2FE /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 462BE603D49F1FEA848B782AEE4511BC /* ReplaceMe.m */; };
-		A1986C9E87413AADFA6A23D7D2B9417E /* carotene-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749E449AD905D5D50134048D09F3F2D /* carotene-dummy.m */; };
 		A1C7A28048D6BB4C97353F0B67DBA6D9 /* Specta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E484AFB12A07601CE9BC0088A262E307 /* Specta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1DCF9A9C12B7883BBEC2B985690A9F7 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 619777C6C4E98F5E7991FD7A8C16BAA4 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4C3B907F4465E6F0420755F95D1FAB6 /* SPTSharedExampleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB26EE44D8BA93DF8851840B97BFB9 /* SPTSharedExampleGroups.m */; };
 		A4D7D62B338428B8465895801AA378E5 /* SpectaDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = FE12CFC92E25A4AE9F402D9142B91425 /* SpectaDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4F32B80C91D25E30F7603D397DD7BFF /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C881D4E07C300AE15FF8C4C2723D7339 /* SRWebSocket.m */; };
 		A54FDB35198825B9C6F42E6A23E80EBA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58CAA385657E2AED8B53A4733D4D3A /* XCTest.framework */; };
 		A6D2DCEE590FF6802930B6D6E9F94305 /* XCTest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 49E25FF4F02B151F909EFD2F1E5EB5C6 /* XCTest+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD4406132D859D0A086C0EAA3947E032 /* Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD51A5E27FDB022117029C8A771678D /* Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADC7971934967D16A83DE6676D30AD7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1599B3D2B5C8C72B475C8EBF3F1E5D /* Foundation.framework */; };
+		AE3888F43C020079C08EA72E4CBA9FE6 /* CRTNCarotene.m in Sources */ = {isa = PBXBuildFile; fileRef = E22EE4900FE2CD3AF7457FFE79B4D9F0 /* CRTNCarotene.m */; };
 		AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A42F2A9274731F311AD40E822812163 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFFC8900E52BBEC72059334132F3A8F3 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A8679C12E1F69CF3BDAFE6687870B66F /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B04AC583A2D3144AD6B5050CFAD6C103 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671827CB75E9F511422B45536BE5417B /* FBSnapshotTestCase.framework */; };
 		B14EF5D9CBFFAFC68C3EF347D3D638BB /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 006F5F79F37E3FD299C272834F2455B0 /* UIImage+Compare.m */; };
-		B59441B725754C30878A01449717CA1B /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D6D4A374F79B41ECD3BE13BE037E399 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B74D012138CACA01FEFAA3BBE115A7B0 /* SpectaUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB670A97CA7FE979B16314563E2ACF /* SpectaUtility.m */; };
 		B811D3862862961641FD93F872CE1044 /* SPTCompiledExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 99CA9B9B7ACA1FE374ED60ACBEF61584 /* SPTCompiledExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B84431CF8C64F363A334AA7089F6C134 /* NSValue+Expecta.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9420DAF77195039C36A9BB9E250C9E /* NSValue+Expecta.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -129,6 +125,7 @@
 		BC55C8365AEFF8217F6A567607754854 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E4576E1BD44001645102760538D27 /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BEFFE9FFE52E9A0833A7D2D8FB67EB4D /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA6586B98CCC796FD5D6400B1543F0 /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C184D17BC1C4C301EB1FA99BBF542B69 /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F37C9143AE399DD2896B3737DA6EC9F /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3B0CF2C4FA998B30701EAC0CB6E8B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1599B3D2B5C8C72B475C8EBF3F1E5D /* Foundation.framework */; };
 		CA0D616091D69C28D49893E9A53BC6C8 /* SPTSharedExampleGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B415DEE4A6561CAD82FBF454B8493E8 /* SPTSharedExampleGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE3F4ECBB0BC095577D66AE50C8E604C /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5194DA48D20919E333DC6E4882AF670A /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6838E42D9C50FC39B1D3006C0724E9C /* Expecta+Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE08DA3F3433C12A6547391F7A40687 /* Expecta+Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,20 +139,23 @@
 		E0BD61F6DA6DBC18A736D53C8BA7781E /* Pods-carotene_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450263C09F880C2161B2FDCFE3251A6 /* Pods-carotene_Tests-dummy.m */; };
 		E136B4361043E6D4F41DFF548BFBD0AD /* SPTTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = FD53AF770944D5E3AC78265FF3D65E6E /* SPTTestSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1EC4532663CA75DE5BD00CB0A56814D /* Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = D9B024CD71D621A2E050AB34CECA2FC4 /* Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4862311D381D3B0DF8D255B5F1B3126 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFF2DE3C87DE311D6598304E6AF3078 /* CFNetwork.framework */; };
+		E2A383D08B6F20A26147EC5D655B791A /* carotene.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57E36E223118BA10A935A21873AFD3DE /* carotene.bundle */; };
 		E65ED7F71C691544A2F8260CBBF7CDAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1599B3D2B5C8C72B475C8EBF3F1E5D /* Foundation.framework */; };
 		E735386085CE344F6A01178CF4763852 /* EXPMatchers+beNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE22A0F95451A724541B06814219395 /* EXPMatchers+beNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9D8C53D18B57A7526CF3589FFF25489 /* carotene.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57E36E223118BA10A935A21873AFD3DE /* carotene.bundle */; };
 		EF6497EE123F6BC0C1B09717437C5908 /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B6299F02B706CCF8DEFE431436EAA4 /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F04BB3DD368646F3A3CA387D94450F7D /* SPTGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 7472A08CE01D811E8CBF81E8FAA3549E /* SPTGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0DDF02A078B917997FF025BB33BB842 /* EXPMatchers+conformTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A91869851C80AC67DCAE5E6E2C84720 /* EXPMatchers+conformTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F12D57414A73406831CC032A7170DBFF /* EXPMatchers+beginWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A429492324EE5ADA63B45DEFEC0A1C /* EXPMatchers+beginWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F13E7AC39EFB9C9436F2E9DC2B3BABF4 /* Pods-carotene_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FEBEAC9AD8EDBC66662A6A11B1963 /* Pods-carotene_Example-dummy.m */; };
 		F41209A94070904A00BDF24ACB6336B6 /* EXPMatchers+beFalsy.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D9CAE34B0D4122370055A3D08A964E /* EXPMatchers+beFalsy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F57753344099AF14A08D0BFC5B0FDC4D /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D6D4A374F79B41ECD3BE13BE037E399 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6593A73B2CEC415295A88F059FEACF9 /* carotene-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73EC774B00450499247D4B6A016ADD5F /* carotene-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F67D0E96441625DD477EF08765169A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1599B3D2B5C8C72B475C8EBF3F1E5D /* Foundation.framework */; };
 		F6FDC782B0E73551F14C148486B9FD6B /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = B94B9DE734A4B405A14A7F54B7DB86CC /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F75CB2A727F678C9A848A3A11EA7979B /* EXPMatchers+haveCountOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7740060E072AFC5E323B9C9E8BC644 /* EXPMatchers+haveCountOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7FFC5EAEF17E99D7CF10AB397850D91 /* Pods-carotene_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B30A1BE9369D1BBFA65620E2AF10A3 /* Pods-carotene_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9698EFB8A2406E3469F43438EA430C8 /* SPTSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6965440BDBE6B8FF2AA6868837F8F /* SPTSpec.m */; };
+		FB0757F339A01694B636B90B85EA46F7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA044C97C69660A9A43EF76B153EB6 /* Security.framework */; };
 		FC20596ABFE14A61F171A29FD03275E7 /* EXPMatchers+contain.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF86015C38C32ED6CA39A75DC50C56E /* EXPMatchers+contain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FC45858927D3B6A0F922C4B697B04A38 /* EXPMatchers+match.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBFB0474A7A6F372ACFFC3C5829214C /* EXPMatchers+match.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FD2D4497BC41412128C2D87C1BDE7398 /* EXPMatchers+beginWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A7FF48E0F823F29AB331CDA82F959E0 /* EXPMatchers+beginWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,13 +185,6 @@
 			remoteGlobalIDString = 0D888F29E05E498D0CD91A51D28599A5;
 			remoteInfo = Expecta;
 		};
-		2AA3260660C176A0970BCD0D8778DCBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4948F64F143B1EFA94231278B7C4345;
-			remoteInfo = SocketRocket;
-		};
 		2C98532365B2E266338D424663CF0002 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -203,14 +196,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5211D7FFC916DB7EBD4D1F82EBDC54BA;
+			remoteGlobalIDString = 034DAE3EEDB7E1EFEFACF5F194703E13;
 			remoteInfo = carotene;
 		};
 		8C6A312261BA20855783FDBFEB668D9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E4948F64F143B1EFA94231278B7C4345;
+			remoteGlobalIDString = 13B30787186EF43A4D3690CD5291AE3D;
+			remoteInfo = SocketRocket;
+		};
+		919580FF28EB5618EC962F336EF4E4C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B30787186EF43A4D3690CD5291AE3D;
 			remoteInfo = SocketRocket;
 		};
 		9EF0B61388E65ABE60753190A229F92E /* PBXContainerItemProxy */ = {
@@ -220,25 +220,25 @@
 			remoteGlobalIDString = CCF72F68EC1457BB881939E491E263A3;
 			remoteInfo = Specta;
 		};
-		A0F1BE4854CC093E3F16D24DE7769C14 /* PBXContainerItemProxy */ = {
+		ADB00A39C46FEA1E231CB22B70B043A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5B9A70C6725FB89CAA4AB90C7C902B84;
+			remoteGlobalIDString = A0B19E55D43D907A13F9203320B6A97C;
 			remoteInfo = "carotene-carotene";
 		};
 		B48F26CF28ABFA8B5BB7F58B90C30C79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5211D7FFC916DB7EBD4D1F82EBDC54BA;
+			remoteGlobalIDString = 034DAE3EEDB7E1EFEFACF5F194703E13;
 			remoteInfo = carotene;
 		};
 		DA284F7D3FFA0B3FA0E46CFEC5F7769A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E4948F64F143B1EFA94231278B7C4345;
+			remoteGlobalIDString = 13B30787186EF43A4D3690CD5291AE3D;
 			remoteInfo = SocketRocket;
 		};
 		E0554EF2942F72AD762F1056DCF6FB23 /* PBXContainerItemProxy */ = {
@@ -295,7 +295,6 @@
 		412A93A22B00319DC3D1AE1E329BC880 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		422E17F31F19986CB83614AFE7CA1687 /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "Expecta/Matchers/EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
 		4556B715451469DF4A87331BFE432DB4 /* EXPMatchers+beTruthy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beTruthy.m"; path = "Expecta/Matchers/EXPMatchers+beTruthy.m"; sourceTree = "<group>"; };
-		462BE603D49F1FEA848B782AEE4511BC /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		4749E449AD905D5D50134048D09F3F2D /* carotene-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "carotene-dummy.m"; sourceTree = "<group>"; };
 		47E6E5DB58ECB276FA1586B5D2C1C05E /* SPTCallSite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCallSite.m; path = Specta/Specta/SPTCallSite.m; sourceTree = "<group>"; };
 		482E435919C44E653F3B3F2F62F44177 /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
@@ -332,8 +331,6 @@
 		619777C6C4E98F5E7991FD7A8C16BAA4 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		61F66E3EC7341DAE9613318D3DEBDA26 /* SPTExampleGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExampleGroup.m; path = Specta/Specta/SPTExampleGroup.m; sourceTree = "<group>"; };
 		66857F755C3CF0B3A0DFAE7A66F3F84B /* EXPMatchers+beInTheRangeOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInTheRangeOf.m"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.m"; sourceTree = "<group>"; };
-		669ACB781C04D5D800394F8B /* CRTNCarotene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTNCarotene.m; sourceTree = "<group>"; };
-		669ACB7A1C04D5F200394F8B /* CRTNCarotene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTNCarotene.h; sourceTree = "<group>"; };
 		671827CB75E9F511422B45536BE5417B /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F0050547D803673C3B154A075BFE92 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SocketRocket.modulemap; sourceTree = "<group>"; };
 		6A6D33A1AABDAEC3A20A8E7188F92872 /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "Expecta/Matchers/EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
@@ -407,6 +404,7 @@
 		C3F15E1B3CA471209EB664D2D390D8DC /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
 		C435391D3A2C1A2BB12D9B6716ADB31E /* EXPDoubleTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDoubleTuple.h; path = Expecta/EXPDoubleTuple.h; sourceTree = "<group>"; };
 		C46696F8955EFFD455A0DEA208927FCC /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		C4CC0BF36192E28C0DB08F1180E97474 /* CRTNCarotene.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRTNCarotene.h; sourceTree = "<group>"; };
 		C5537D66513D5EF1E8E2FBC58435C168 /* carotene.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = carotene.modulemap; sourceTree = "<group>"; };
 		C6A7F135A66BC4FA5C3BD519DB730739 /* EXPExpect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPExpect.h; path = Expecta/EXPExpect.h; sourceTree = "<group>"; };
 		C6ED8758A95CD07534E6A1BCA5F8E1F5 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
@@ -418,6 +416,7 @@
 		D9F819AEC7AB9618A56540831F970734 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		DCBFB0474A7A6F372ACFFC3C5829214C /* EXPMatchers+match.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+match.m"; path = "Expecta/Matchers/EXPMatchers+match.m"; sourceTree = "<group>"; };
 		E03BD36572D2D483EAF9FFD703B65B96 /* SocketRocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-umbrella.h"; sourceTree = "<group>"; };
+		E22EE4900FE2CD3AF7457FFE79B4D9F0 /* CRTNCarotene.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRTNCarotene.m; sourceTree = "<group>"; };
 		E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = carotene.xcconfig; sourceTree = "<group>"; };
 		E484AFB12A07601CE9BC0088A262E307 /* Specta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-umbrella.h"; sourceTree = "<group>"; };
 		E4B6299F02B706CCF8DEFE431436EAA4 /* EXPUnsupportedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPUnsupportedObject.m; path = Expecta/EXPUnsupportedObject.m; sourceTree = "<group>"; };
@@ -448,10 +447,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E68DFDC203AAB57D1F0880A8323B01A /* Frameworks */ = {
+		2A369E96D5264EE18BD6F98ED8C4D0A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67D0E96441625DD477EF08765169A65 /* Foundation.framework in Frameworks */,
+				8C26793DE8390E2AF3BD28705A26AA8A /* SocketRocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,13 +475,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C4B420377A44D2A636673B8029460B2 /* Frameworks */ = {
+		64BCAA0C32D10F732753B2AA04F8DD80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4862311D381D3B0DF8D255B5F1B3126 /* CFNetwork.framework in Frameworks */,
-				7F64869DDE8748CD028EB46A83FFCE2B /* Foundation.framework in Frameworks */,
-				4E8C62EF3056E2C28422011DD43A8616 /* Security.framework in Frameworks */,
+				0DE37EA21D6D74C8C553756C0D84CE46 /* CFNetwork.framework in Frameworks */,
+				C3B0CF2C4FA998B30701EAC0CB6E8B81 /* Foundation.framework in Frameworks */,
+				FB0757F339A01694B636B90B85EA46F7 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,15 +490,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65ED7F71C691544A2F8260CBBF7CDAD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		915A9233B03ACC6FDA076DC56E840FB7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55A055CA3CE8BCE0B515E8E66796FD17 /* Foundation.framework in Frameworks */,
-				6E57A6B462AB7DCF3C77143280E6F165 /* SocketRocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +510,13 @@
 				B04AC583A2D3144AD6B5050CFAD6C103 /* FBSnapshotTestCase.framework in Frameworks */,
 				D9826D759990C411D44776DFAF0705E1 /* Foundation.framework in Frameworks */,
 				08633497048C6516EEEE5B61AF8932F7 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA309DC333FADA021E729A9A4B80DAED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,16 +555,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		17775700028746A487B0B4E463250B01 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				462BE603D49F1FEA848B782AEE4511BC /* ReplaceMe.m */,
-				669ACB781C04D5D800394F8B /* CRTNCarotene.m */,
-				669ACB7A1C04D5F200394F8B /* CRTNCarotene.h */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		2B49C0A8E7F1999CDB4EA3A6FAE9B1E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,7 +578,7 @@
 		3666854BFBCFC8FF13113508313EC359 /* carotene */ = {
 			isa = PBXGroup;
 			children = (
-				FA17EDD26CC992D1708E6086BDED0EFD /* Pod */,
+				7A980C670B5562D072B1AAB20FB71B97 /* Pod */,
 				C6D82B9BE332BA0D233CD870D019E2B3 /* Support Files */,
 			);
 			name = carotene;
@@ -639,6 +628,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Expecta+Snapshots";
+			sourceTree = "<group>";
+		};
+		7A980C670B5562D072B1AAB20FB71B97 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D994A677DC0130AA4BAD5C55A1084A45 /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -875,6 +872,15 @@
 			path = Expecta;
 			sourceTree = "<group>";
 		};
+		D994A677DC0130AA4BAD5C55A1084A45 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C4CC0BF36192E28C0DB08F1180E97474 /* CRTNCarotene.h */,
+				E22EE4900FE2CD3AF7457FFE79B4D9F0 /* CRTNCarotene.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		E98AAC6905583A497306905661B44AE7 /* SwiftSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,14 +930,6 @@
 				0125FBFD166935DFC204182BBC0B1458 /* Support Files */,
 			);
 			path = Specta;
-			sourceTree = "<group>";
-		};
-		FA17EDD26CC992D1708E6086BDED0EFD /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				17775700028746A487B0B4E463250B01 /* Classes */,
-			);
-			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1033,6 +1031,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A898AFE3379EE16B97DA7B403E721E50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6593A73B2CEC415295A88F059FEACF9 /* carotene-umbrella.h in Headers */,
+				70FAD80858402EC6F404234AC85C492E /* CRTNCarotene.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFEB3FDDB7BA1A944F55F7DF29EC40B7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1046,26 +1053,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC61F70913B82A9720BD75F32E9436FB /* Headers */ = {
+		C41A6A627821C997C4980B6B7268D0F1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664D8A8536A7E269609A23F8FADD4EFD /* carotene-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF8059E01D88BA003DBCA72B7785B158 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9573687F12EF5D4AED2BAFC0620F871F /* SocketRocket-umbrella.h in Headers */,
-				B59441B725754C30878A01449717CA1B /* SRWebSocket.h in Headers */,
+				7098123EA9C7537EC0D6C8959F3C262C /* SocketRocket-umbrella.h in Headers */,
+				F57753344099AF14A08D0BFC5B0FDC4D /* SRWebSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		034DAE3EEDB7E1EFEFACF5F194703E13 /* carotene */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AA9C0B5D0803E9ADB6E33CCF6D6C410 /* Build configuration list for PBXNativeTarget "carotene" */;
+			buildPhases = (
+				C0C8032C0D48471B984728CD5056E531 /* Sources */,
+				2A369E96D5264EE18BD6F98ED8C4D0A9 /* Frameworks */,
+				E305EF4A9FDA1D1CABB6D2259F9AFA96 /* Resources */,
+				A898AFE3379EE16B97DA7B403E721E50 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7221E89EBDD6F480E842EA2036764D31 /* PBXTargetDependency */,
+				E5B27E372E7717436AF94BD94E1C3901 /* PBXTargetDependency */,
+			);
+			name = carotene;
+			productName = carotene;
+			productReference = 36082063B3A3B9BD036BF4B86092658D /* carotene.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		0D888F29E05E498D0CD91A51D28599A5 /* Expecta */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC61702A42844E4ED762A73E8893436B /* Build configuration list for PBXNativeTarget "Expecta" */;
@@ -1081,6 +1100,23 @@
 			name = Expecta;
 			productName = Expecta;
 			productReference = 4D95189B54B46A624C7A3533763F5045 /* Expecta.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		13B30787186EF43A4D3690CD5291AE3D /* SocketRocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C61B6C9C0DF6B90D22F3DBEF58412C /* Build configuration list for PBXNativeTarget "SocketRocket" */;
+			buildPhases = (
+				F95254C313203D0EEB237425D9C80C30 /* Sources */,
+				64BCAA0C32D10F732753B2AA04F8DD80 /* Frameworks */,
+				C41A6A627821C997C4980B6B7268D0F1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketRocket;
+			productName = SocketRocket;
+			productReference = 09644D74B06BC783015A2EFC26A187FD /* SocketRocket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		47B871F0807EA18663D68AE65953C466 /* Pods-carotene_Tests */ = {
@@ -1106,33 +1142,13 @@
 			productReference = BDAE2FEA72EFDFBAF499E72BB0A402A9 /* Pods_carotene_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5211D7FFC916DB7EBD4D1F82EBDC54BA /* carotene */ = {
+		A0B19E55D43D907A13F9203320B6A97C /* carotene-carotene */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 116F387FCAFC24ABED5B9FCFC255088C /* Build configuration list for PBXNativeTarget "carotene" */;
+			buildConfigurationList = DFBEF88E56FBFC5D83FC6B459DD62ADC /* Build configuration list for PBXNativeTarget "carotene-carotene" */;
 			buildPhases = (
-				26A1BF5AB8844A7C0E222DECC97D6EF4 /* Sources */,
-				915A9233B03ACC6FDA076DC56E840FB7 /* Frameworks */,
-				57B0BCA599543C442B48C46ECD157C1D /* Resources */,
-				DC61F70913B82A9720BD75F32E9436FB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2442A457E00ACC52DC68BE70B27FAA8 /* PBXTargetDependency */,
-				ED74093B3312BA0CEBB357B74C7B9501 /* PBXTargetDependency */,
-			);
-			name = carotene;
-			productName = carotene;
-			productReference = 36082063B3A3B9BD036BF4B86092658D /* carotene.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5B9A70C6725FB89CAA4AB90C7C902B84 /* carotene-carotene */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9184B3A5058E106D5EE00509336B37FF /* Build configuration list for PBXNativeTarget "carotene-carotene" */;
-			buildPhases = (
-				A4DFCAF2E1E1D3E80EF6D309175BA12C /* Sources */,
-				0E68DFDC203AAB57D1F0880A8323B01A /* Frameworks */,
-				B176D1ABE30B8FCB355BBFEF1546CC41 /* Resources */,
+				D81B538CC3D66E8D2A681308FC186069 /* Sources */,
+				CA309DC333FADA021E729A9A4B80DAED /* Frameworks */,
+				4AD7B9D9313E5A8E102866F62B8ABB44 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1175,23 +1191,6 @@
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
 			productReference = 8BECAB9D483A1BC320EC6430ABAC3DB1 /* FBSnapshotTestCase.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E4948F64F143B1EFA94231278B7C4345 /* SocketRocket */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89601ADC5919A4C1A87C34642BC2874E /* Build configuration list for PBXNativeTarget "SocketRocket" */;
-			buildPhases = (
-				D695CBD7B97B123D2547EE4CD5A6153A /* Sources */,
-				6C4B420377A44D2A636673B8029460B2 /* Frameworks */,
-				FF8059E01D88BA003DBCA72B7785B158 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SocketRocket;
-			productName = SocketRocket;
-			productReference = 09644D74B06BC783015A2EFC26A187FD /* SocketRocket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		ED4342E27597144E22BA4081D52F6DD1 /* Expecta+Snapshots */ = {
@@ -1253,32 +1252,32 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5211D7FFC916DB7EBD4D1F82EBDC54BA /* carotene */,
-				5B9A70C6725FB89CAA4AB90C7C902B84 /* carotene-carotene */,
+				034DAE3EEDB7E1EFEFACF5F194703E13 /* carotene */,
+				A0B19E55D43D907A13F9203320B6A97C /* carotene-carotene */,
 				0D888F29E05E498D0CD91A51D28599A5 /* Expecta */,
 				ED4342E27597144E22BA4081D52F6DD1 /* Expecta+Snapshots */,
 				DD86ABD743B0605672C710ADC56EB9DA /* FBSnapshotTestCase */,
 				FF66AA8BA9A5E8A7A8380A36516DFCFB /* Pods-carotene_Example */,
 				47B871F0807EA18663D68AE65953C466 /* Pods-carotene_Tests */,
-				E4948F64F143B1EFA94231278B7C4345 /* SocketRocket */,
+				13B30787186EF43A4D3690CD5291AE3D /* SocketRocket */,
 				CCF72F68EC1457BB881939E491E263A3 /* Specta */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57B0BCA599543C442B48C46ECD157C1D /* Resources */ = {
+		4AD7B9D9313E5A8E102866F62B8ABB44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D8C53D18B57A7526CF3589FFF25489 /* carotene.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B176D1ABE30B8FCB355BBFEF1546CC41 /* Resources */ = {
+		E305EF4A9FDA1D1CABB6D2259F9AFA96 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A383D08B6F20A26147EC5D655B791A /* carotene.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,16 +1307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0BD61F6DA6DBC18A736D53C8BA7781E /* Pods-carotene_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26A1BF5AB8844A7C0E222DECC97D6EF4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1986C9E87413AADFA6A23D7D2B9417E /* carotene-dummy.m in Sources */,
-				669ACB791C04D5D800394F8B /* CRTNCarotene.m in Sources */,
-				A19794FD14C6DCAFD56F0E8671A8B2FE /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,13 +1340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F13E7AC39EFB9C9436F2E9DC2B3BABF4 /* Pods-carotene_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A4DFCAF2E1E1D3E80EF6D309175BA12C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,12 +1385,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D695CBD7B97B123D2547EE4CD5A6153A /* Sources */ = {
+		C0C8032C0D48471B984728CD5056E531 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				679C42D155FC2672999AF5E9E6580E57 /* SocketRocket-dummy.m in Sources */,
-				A4F32B80C91D25E30F7603D397DD7BFF /* SRWebSocket.m in Sources */,
+				5C9BD8DC8BC892199064BA2FB784AF00 /* carotene-dummy.m in Sources */,
+				AE3888F43C020079C08EA72E4CBA9FE6 /* CRTNCarotene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81B538CC3D66E8D2A681308FC186069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95254C313203D0EEB237425D9C80C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A0D59ED45D8A8F5ADF7D87899162483 /* SocketRocket-dummy.m in Sources */,
+				5EB6ABE2A4B235DFE36EDED853FB9543 /* SRWebSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1418,13 +1416,13 @@
 		1AEF732FD4A6F80FB2659CB9D0FF0BFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = carotene;
-			target = 5211D7FFC916DB7EBD4D1F82EBDC54BA /* carotene */;
+			target = 034DAE3EEDB7E1EFEFACF5F194703E13 /* carotene */;
 			targetProxy = B48F26CF28ABFA8B5BB7F58B90C30C79 /* PBXContainerItemProxy */;
 		};
 		2F0DE40459E59D9CE6A81EB36016F364 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SocketRocket;
-			target = E4948F64F143B1EFA94231278B7C4345 /* SocketRocket */;
+			target = 13B30787186EF43A4D3690CD5291AE3D /* SocketRocket */;
 			targetProxy = 8C6A312261BA20855783FDBFEB668D9C /* PBXContainerItemProxy */;
 		};
 		39709DEF6D48A9B8D7AD6F27CB242B45 /* PBXTargetDependency */ = {
@@ -1432,6 +1430,12 @@
 			name = FBSnapshotTestCase;
 			target = DD86ABD743B0605672C710ADC56EB9DA /* FBSnapshotTestCase */;
 			targetProxy = 1E4F144BA8FD73866160A8FC66B19F4C /* PBXContainerItemProxy */;
+		};
+		7221E89EBDD6F480E842EA2036764D31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 13B30787186EF43A4D3690CD5291AE3D /* SocketRocket */;
+			targetProxy = 919580FF28EB5618EC962F336EF4E4C6 /* PBXContainerItemProxy */;
 		};
 		7AE58A131C9089FA6667B49C1066BCB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1442,7 +1446,7 @@
 		8467379AD598C5CE131670F2009F3691 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = carotene;
-			target = 5211D7FFC916DB7EBD4D1F82EBDC54BA /* carotene */;
+			target = 034DAE3EEDB7E1EFEFACF5F194703E13 /* carotene */;
 			targetProxy = 7EAEC399DCEFD3911D87234EFF88C2B5 /* PBXContainerItemProxy */;
 		};
 		A28B7BE98B87EA7500818B1472BB7AA3 /* PBXTargetDependency */ = {
@@ -1454,7 +1458,7 @@
 		BD837261EF940B0A9DF95A9B36F497BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SocketRocket;
-			target = E4948F64F143B1EFA94231278B7C4345 /* SocketRocket */;
+			target = 13B30787186EF43A4D3690CD5291AE3D /* SocketRocket */;
 			targetProxy = DA284F7D3FFA0B3FA0E46CFEC5F7769A /* PBXContainerItemProxy */;
 		};
 		C1A2482A81DEA93B0B53DA6D363EC547 /* PBXTargetDependency */ = {
@@ -1463,23 +1467,17 @@
 			target = ED4342E27597144E22BA4081D52F6DD1 /* Expecta+Snapshots */;
 			targetProxy = 244FAF87AC90CEB33F554E1843B68961 /* PBXContainerItemProxy */;
 		};
-		D2442A457E00ACC52DC68BE70B27FAA8 /* PBXTargetDependency */ = {
+		E5B27E372E7717436AF94BD94E1C3901 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SocketRocket;
-			target = E4948F64F143B1EFA94231278B7C4345 /* SocketRocket */;
-			targetProxy = 2AA3260660C176A0970BCD0D8778DCBF /* PBXContainerItemProxy */;
+			name = "carotene-carotene";
+			target = A0B19E55D43D907A13F9203320B6A97C /* carotene-carotene */;
+			targetProxy = ADB00A39C46FEA1E231CB22B70B043A0 /* PBXContainerItemProxy */;
 		};
 		EA18A64C5A463362E721A1B79833692A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSnapshotTestCase;
 			target = DD86ABD743B0605672C710ADC56EB9DA /* FBSnapshotTestCase */;
 			targetProxy = 2C98532365B2E266338D424663CF0002 /* PBXContainerItemProxy */;
-		};
-		ED74093B3312BA0CEBB357B74C7B9501 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "carotene-carotene";
-			target = 5B9A70C6725FB89CAA4AB90C7C902B84 /* carotene-carotene */;
-			targetProxy = A0F1BE4854CC093E3F16D24DE7769C14 /* PBXContainerItemProxy */;
 		};
 		F98459B23FB8584E6C30C36FA6536046 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1562,6 +1560,18 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		0C57AA133F080A66B625DB39F63E46FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = carotene;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		1D3F230892BD0EEA59FAEF09C30C4C8A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1648,46 +1658,7 @@
 			};
 			name = Debug;
 		};
-		2300569D39E775E5F189F99F82C10508 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 482E435919C44E653F3B3F2F62F44177 /* SocketRocket.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SocketRocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		41EDE4DB124EAB07B121F4D8619E2455 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = carotene;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		5A8EF7723A7CF2C7C794F5470B7D8FAE /* Debug */ = {
+		3EC0C551B1F24B9FB3EBF559F2337F3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */;
 			buildSettings = {
@@ -1704,7 +1675,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/carotene/carotene.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = carotene;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1712,7 +1683,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		5B82CF2FBF33C77017DA6EDED034A81B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1768,7 +1739,34 @@
 			};
 			name = Debug;
 		};
-		7A497C8E996414C14EE5521FA512FFF8 /* Release */ = {
+		6C52DC59D944E8D2B88DA518594CEB53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482E435919C44E653F3B3F2F62F44177 /* SocketRocket.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7DCDF2019E9083A2FF3B81A1EAB82333 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 482E435919C44E653F3B3F2F62F44177 /* SocketRocket.xcconfig */;
 			buildSettings = {
@@ -1964,19 +1962,7 @@
 			};
 			name = Debug;
 		};
-		C8BF478880442511AE932BDE94A7C5B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = carotene;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		CDD97984EEDCA23AA80802F7B7F8A6EF /* Release */ = {
+		D509088EDE3C0007C797044652C12BBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */;
 			buildSettings = {
@@ -1993,7 +1979,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/carotene/carotene.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = carotene;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2001,7 +1987,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		D805B1DC074BD006A2C6C1914645EC3B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2033,6 +2019,18 @@
 			};
 			name = Release;
 		};
+		DCD0E32D9ACC85B97E6166BF46AD01CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E43B59014D984B1D679909A1AD3CDFCF /* carotene.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = carotene;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2045,20 +2043,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		116F387FCAFC24ABED5B9FCFC255088C /* Build configuration list for PBXNativeTarget "carotene" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A8EF7723A7CF2C7C794F5470B7D8FAE /* Debug */,
-				CDD97984EEDCA23AA80802F7B7F8A6EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
 				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AA9C0B5D0803E9ADB6E33CCF6D6C410 /* Build configuration list for PBXNativeTarget "carotene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D509088EDE3C0007C797044652C12BBE /* Debug */,
+				3EC0C551B1F24B9FB3EBF559F2337F3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2081,29 +2079,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89601ADC5919A4C1A87C34642BC2874E /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2300569D39E775E5F189F99F82C10508 /* Debug */,
-				7A497C8E996414C14EE5521FA512FFF8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9184B3A5058E106D5EE00509336B37FF /* Build configuration list for PBXNativeTarget "carotene-carotene" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C8BF478880442511AE932BDE94A7C5B1 /* Debug */,
-				41EDE4DB124EAB07B121F4D8619E2455 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BBE59BCD5ADEB5D55801918FED22F022 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E480D354894461A4E37FC06787A457 /* Debug */,
 				1E026E3FD201CCFAB88C21AC7D8FDB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C61B6C9C0DF6B90D22F3DBEF58412C /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C52DC59D944E8D2B88DA518594CEB53 /* Debug */,
+				7DCDF2019E9083A2FF3B81A1EAB82333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2122,6 +2111,15 @@
 			buildConfigurations = (
 				6B0ED2539FD84095ADF011B9A7502D8E /* Debug */,
 				5B82CF2FBF33C77017DA6EDED034A81B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFBEF88E56FBFC5D83FC6B459DD62ADC /* Build configuration list for PBXNativeTarget "carotene-carotene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD0E32D9ACC85B97E6166BF46AD01CA /* Debug */,
+				0C57AA133F080A66B625DB39F63E46FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

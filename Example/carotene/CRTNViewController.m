@@ -8,12 +8,14 @@
 
 #import "CRTNViewController.h"
 #import <SocketRocket/SRWebSocket.h>
+#import <Carotene/CRTNCarotene.h>
 
 @interface CRTNViewController () <SRWebSocketDelegate>
 
 @end
 
 @implementation CRTNViewController {
+    CRTNCarotene *carotene;
     SRWebSocket *_webSocket;
     NSMutableArray *_messages;
 }
@@ -47,7 +49,6 @@
 {
     [super viewDidLoad];
     _messages = [[NSMutableArray alloc] init];
-    [_messages addObject:@"hola"];
 
     [self.tableView reloadData];
 }
@@ -59,6 +60,7 @@
     
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://localhost:8081/stream"]]];
     _webSocket.delegate = self;
+    
     
     self.title = @"Opening Connection...";
     [_webSocket open];
@@ -76,6 +78,10 @@
 {
     [super viewWillAppear:animated];
     [self _reconnect];
+    self.title = @"now this...";
+    carotene = [[CRTNCarotene alloc] init:[NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://localhost:8081/stream"]]];
+       self.title = @"GOL!";
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -219,29 +225,15 @@
     if ([text rangeOfString:@"\n"].location != NSNotFound) {
         NSString *rawMsg = [[textView.text stringByReplacingCharactersInRange:range withString:text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
-        
-        
-        NSError  *error;
         NSDictionary *dictText = @{
                                    @"msg" : rawMsg,
                                    };
         
-        NSData       *jsonDataTxt  = [NSJSONSerialization dataWithJSONObject:dictText options:0 error:&error];
-        NSString *msgTxt = [[NSString alloc] initWithData:jsonDataTxt encoding:NSUTF8StringEncoding];
-        
-        
-        NSDictionary *dictionary = @{
-                                     @"publish" : msgTxt,
-                                     @"channel" : @"chat"
-                                     
-                                     };
-        
-        NSData       *jsonData  = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:&error];
-        NSString *msg = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"2 %@", msg);
-        [_webSocket send:msg];
-        
+
+        [carotene publish:dictText channel:@"chat"];
+
         textView.text = @"";
+        
         return NO;
     }
     return YES;

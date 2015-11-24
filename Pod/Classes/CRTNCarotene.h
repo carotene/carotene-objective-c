@@ -9,28 +9,16 @@
 #ifndef Pods_CRTNCarotene_h
 #define Pods_CRTNCarotene_h
 
-@class CRTNCarotene;
+@interface CRTNCarotene : NSObject
 
-#pragma mark - CRTNCaroteneDelegate
+- (id)init:(NSURLRequest *)host;
 
-@protocol CRTNCaroteneDelegate;
+- (void)connect;
 
-#pragma mark - CRTNCaroteneDelegate
+- (void)disconnect;
 
-@protocol CRTNCaroteneDelegate <NSObject>
-
-// message will either be an NSString if the server is using text
-// or NSData if the server is using binary.
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
-
-@optional
-
-- (void)webSocketDidOpen:(SRWebSocket *)webSocket;
-- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
-- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
-- (void)webSocket:(SRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload;
+- (void)publish:(NSObject *)data channel:(NSString *)channelName;
 
 @end
-
 
 #endif
